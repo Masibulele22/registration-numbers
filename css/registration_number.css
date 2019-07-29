@@ -1,0 +1,68 @@
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    color: black;
+}
+
+head {
+    height: 0%;
+}
+
+body {
+    font-family: "Boogaloo", cursive;
+    display: grid;
+    grid-template-rows: 22% 40% 20% 45% 90%;
+    grid-row-gap: 3%;
+    grid-column-gap: 3%;
+}
+
+textarea {
+    font-family: "Boogaloo", cursive;
+    font-size: 220%;
+}
+
+.addButton {
+    height: 80%;
+    width: 12%;
+    font-family: "Boogaloo", cursive;
+
+}
+
+.outputDisplay {
+
+}
+
+.numberPlate {
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 8px;
+    margin-left: 45%;
+    margin-right: 45%; 
+    background: yellow;
+}
+
+.row1 {
+    font-size: 220%;
+    margin: 1%;
+    text-align: center;
+}
+
+.row2 {
+    margin: 1%;
+    text-align: center;
+}
+
+.row3 {
+    margin: 1%;
+    text-align: center;
+}
+
+.row4 {
+    margin: 1%;
+    text-align: center;
+    border: 2% solid black;
+    border-radius: 12px;
+
+}

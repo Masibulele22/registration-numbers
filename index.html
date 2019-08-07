@@ -1,18 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="./css/registration_number.css">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Boogaloo|Bungee+Inline|Carter+One|Gochi+Hand|Grand+Hotel|Leckerli+One|Lobster|Merienda|Merienda+One|Nova+Mono|Oleo+Script|Rancho|Righteous|Yesteryear">
+    <link href="./tests/registration_number.tests.js">
+    <!-- <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Boogaloo|Bungee+Inline|Carter+One|Gochi+Hand|Grand+Hotel|Leckerli+One|Lobster|Merienda|Merienda+One|Nova+Mono|Oleo+Script|Rancho|Righteous|Yesteryear"> -->
     <title>Document</title>
 </head>
+
 <body>
-    <div class="row1">Registration Number:</div>
-    <div class="row2"><textarea cols="35%" rows="1%" placeholder="Enter Numberplate Here"></textarea></div>
-    <div class="row3"><button class="addButton">Add</button></div>
-    <div class="row4"><div class="numberPlate">CA 123 19</div></div>
-    <div class="row5"><span class="outputDisplay"></span></div>
+    <center>
+        <p class="row1">Registration Number:</p>
+        <div class="row2"><textarea cols="35%" class="input" rows="1%" id="plate" placeholder="Enter Numberplate Here"
+                onkeyup="numberplateAdded()"></textarea></div>
+        <script>
+            function numberplateAdded() {
+                var plateInCaps = document.getElementById("plate");
+                plateInCaps.value = plateInCaps.value.toUpperCase();
+            }
+        </script>
+
+        <div class="row3"><button class="addButton">Add</button></div>
+        <div class="row6">
+            <select class="row6a">
+                <option value="">Select area</option>
+                <option value="All">All</option>
+                <option value="CJ">Bellville</option>
+                <option value="CA">Cape Town</option>
+                <option value="CK">Malmesbury</option>
+            </select>
+            <div class="error"></div>
+        </div>
+        <div class="row7"><button class="showButton">Show</button></div>
+        <div class="row4">
+            <div class="numberPlate"></div>
+        </div>
+        <div class="row5">
+            <ul class="regList"></ul>
+        </div>
+    </center>
+    <script src="./js/registration_numbers.js"></script>
+    <script src="./dom/registration_numbers.dom.js"></script>
+
+
 </body>
+
 </html>

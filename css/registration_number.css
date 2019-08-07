@@ -10,10 +10,14 @@ head {
     height: 0%;
 }
 
+.hide {
+    display: none;
+}
+
 body {
     font-family: "Boogaloo", cursive;
     display: grid;
-    grid-template-rows: 22% 40% 20% 45% 90%;
+    grid-template-rows: 11% 20% 10% 22% 10% 10% 10%;
     grid-row-gap: 3%;
     grid-column-gap: 3%;
 }
@@ -23,24 +27,45 @@ textarea {
     font-size: 220%;
 }
 
+.error {
+    color: red;
+    font-size: 2%;
+    font-family: "Boogaloo", cursive;
+}
+
 .addButton {
-    height: 80%;
+    height: 180%;
     width: 12%;
     font-family: "Boogaloo", cursive;
 
 }
 
-.outputDisplay {
+select {
+    font-family: "Boogaloo", cursive;
 
+}
+
+.showButton {
+    height: 180%;
+    width: 12%;
+    font-family: "Boogaloo", cursive;
+}
+
+.outputDisplay {
+    
 }
 
 .numberPlate {
     text-align: center;
     border: 2px solid black;
-    border-radius: 8px;
-    margin-left: 45%;
-    margin-right: 45%; 
+    border-radius: 6px;
+    margin: 0%;
+    text-transform: uppercase; 
     background: yellow;
+}
+
+.regList {
+    float: left;
 }
 
 .row1 {
@@ -66,3 +91,25 @@ textarea {
     border-radius: 12px;
 
 }
+
+.row5 {
+    margin: 1%;
+    text-align: left;
+    float: left;
+    height: 270%;
+}
+
+.row6 {
+    margin: 1%;
+    text-align: center;
+}
+
+.row7 {
+    margin: 1%;
+    text-align: center;
+}
+
+.row6a {
+    font-family: "Boogaloo", cursive;
+}
+

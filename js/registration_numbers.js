@@ -29,9 +29,9 @@ function RegNumbers(plates) {
 
         if (!enteredNumberplates.includes(input)) {
             enteredNumberplates.push(input);
-            return true;        
+            return "Add numberplate";        
         }
-        return false;
+        return "Numberplate already added";
     };
 
     function filterRegNumbers(loc) {

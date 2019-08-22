@@ -7,15 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="./css/registration_number.css">
     <link href="./tests/registration_number.tests.js">
-    <link rel="stylesheet" type="text/css"
-        href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Boogaloo|Bungee+Inline|Carter+One|Gochi+Hand|Grand+Hotel|Leckerli+One|Lobster|Merienda|Merienda+One|Nova+Mono|Oleo+Script|Rancho|Righteous|Yesteryear">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Anton|Baloo|Bangers|Barlow+Condensed|Ceviche+One|Lilita+One|Luckiest+Guy|Noto+Sans+SC|Pacifico|Permanent+Marker|Racing+Sans+One|Rajdhani|Ropa+Sans|Rye|Secular+One|Sigmar+One|Tangerine|Zhi+Mang+Xing&display=swap');
+        </style>
     <title>Document</title>
 </head>
 
 <body>
     
         <p class="row1">Registration Number:</p>
-        <div class="row2"><textarea cols="35%" class="input" rows="1%" id="plate" placeholder="Enter Numberplate Here"
+        <div class="row2"><textarea cols="25%" class="input" rows="1%" id="plate" maxlength="10" placeholder="Enter Numberplate Here"
                 onkeyup="numberplateAdded()"></textarea></div>
         <script>
             function numberplateAdded() {
@@ -28,7 +29,7 @@
         <div class="row6">
             <select class="row6a">
                 <option value="">Select area</option>
-                
+                <option class="all" value="ALL">All Towns</option>
                 <option class="bel" value="CJ">Bellville</option>
                 <option class="cap" value="CA">Cape Town</option>
                 <option class="mal" value="CK">Malmesbury</option>
@@ -36,13 +37,9 @@
             <!-- <div class="error"></div> -->
         </div>
         <div class="row7"><button class="showButton">Show</button></div>
-        <div class="row4">
-            <div class="numberPlate"></div>
-        </div>
+        <ul class="regList"></ul>
+        <footer>© MRN Websites 2019. All Rights Reserved.</footer>
 
-        <div class="row5">
-            <ul class="regList"></ul>
-        </div>
     
     <script src="./js/registration_numbers.js"></script>
     <script src="./js/registration_numbers.dom.js"></script>
@@ -50,4 +47,3 @@
 
 </body>
 </html>
-<footer>© MRN Websites 2019. All Rights Reserved.</footer>

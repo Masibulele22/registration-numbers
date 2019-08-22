@@ -20,33 +20,40 @@ function RegNumbers(plates) {
         var input = location + " " + number;
 
         if (input === "") {
-            return "Please enter a valid registration number"
+            return "Please enter a valid registration number!"
         }
 
         if (!checkPlates(input)) {
-            return "Please enter a valid registration number"
+            return "Please enter a valid registration number!"
         }
 
         if (!enteredNumberplates.includes(input)) {
             enteredNumberplates.push(input);
-            return "Add numberplate";        
+            return "Numberplate added";
         }
-        return "Numberplate already added";
+        return "Numberplate already added!";
     };
 
     function filterRegNumbers(loc) {
 
-        var newEnteredNumberplates = [];
-
-        if (enteredNumberplates !== undefined) {
-            for (var i = 0; i < enteredNumberplates.length; i++) {
-
-                if (enteredNumberplates[i].startsWith(loc)) {
-                    newEnteredNumberplates.push(enteredNumberplates[i]);
-                }
-            }
-            return newEnteredNumberplates
+        //console.log(enteredNumberplates);
+        
+        let filteredListOfRegistrations = [];
+        
+        if (loc == 'ALL') {
+            return enteredNumberplates;
         }
+        
+        for (var i = 0; i < enteredNumberplates.length; i++) {
+
+            if (enteredNumberplates[i].startsWith(loc)) {
+                filteredListOfRegistrations.push(enteredNumberplates[i]);
+            }
+        }
+        
+        //console.log(filteredListOfRegistrations);
+       
+        return filteredListOfRegistrations;
     };
 
     function getAll() {

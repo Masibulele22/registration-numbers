@@ -17,64 +17,69 @@ head {
 }
 
 body {
-    font-family: "Lobster", cursive;
+    font-family: 'Rye', cursive;
     display: grid;
-    grid-template-rows: 11% 20% 10% 22% 10% 10% 10% 5% 5%;
-    grid-row-gap: 2%;
-    grid-column-gap: 3%;
+    grid-template-rows: 70px 70px 80px 80px 80px 80px;
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
 }
 
 textarea {
-    font-family: "Lobster", cursive;
-    font-size: 220%;
+    font-family: 'Rye', cursive;
+    font-size: 35px;
 }
 
 /* .error {
     color: red;
     font-size: 2%;
-    font-family: "Boogaloo", cursive;
+    font-famiBoogaloo", cursive;
 } */
 
 .addButton {
-    height: 180%;
-    width: 12%;
-    font-family: "Lobster", cursive;
+    height: 40px;
+    width: 150px;
+    font-family: 'Rye', cursive;
     margin-right: 2%;
 }
 
 .resetButton {
-    height: 180%;
-    width: 12%;
-    font-family: "Lobster", cursive;
+    height: 40px;
+    width: 150px;
+    font-family: 'Rye', cursive;
 }
 
 select {
-    font-family: "Lobster", cursive;
+    font-family: 'Rye', cursive;
 
 }
 
 .showButton {
-    height: 180%;
-    width: 12%;
-    font-family: "Lobster", cursive;
+    height: 40px;
+    width: 150px;
+    font-family: 'Rye', cursive;
 }
 
 .numberPlate {
     text-align: center;
+    color: black;
     border: 2px solid black;
     border-radius: 6px;
     width: 150px; 
     list-style :none;
     margin: 0%;
-    font-family: "Lobster", cursive;
+    font-family: 'Rye', cursive;
     text-transform: uppercase; 
     background: yellow;
     float: left;
     margin: 5px 5px 5px 5px;
+    flex-wrap: wrap;
 }
 
 .regList {
-    float: left;
+    float: right;
+    color: crimson;
+    font-family: "Rye", cursive;
+
 }
 
 .row1 {
@@ -93,21 +98,13 @@ select {
     text-align: center;
     align-content: center;
 }
-
-.row4 {
-    margin: 1%;
-    /* text-align: center; */
-    /* border: 2% solid black; */
-    border-radius: 12px;
-    
-}
-
+/* 
 .row5 {
     margin: 1%;
     text-align: left;
-    float: left;
+    flex-wrap: wrap;
     height: 270%;
-}
+} */
 
 .row6 {
     margin: 1%;
@@ -120,17 +117,18 @@ select {
 }
 
 .row6a {
-    font-family: "Lobster", cursive;
+    font-family: 'Rye', cursive;
 }
 
 footer {
     padding: 0%;
     border: 0%;
-    margin-top: 50px;
+    margin-top: 130px;
     margin-bottom: 0%;
     margin-left: 0%;
     margin-right: 0%;
     float: inline-end;
     font-size: 80%;
     text-align: center;
+    color: black;
 }

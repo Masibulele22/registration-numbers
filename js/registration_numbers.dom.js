@@ -3,6 +3,7 @@ var addButtonElem = document.querySelector(".addButton");
 var resetButtonElem = document.querySelector(".resetButton");
 var showButtonElem = document.querySelector(".showButton");
 
+var allTowns = document.querySelector(".all");
 var bellvilleElem = document.querySelector(".bel");
 var capeTownElem = document.querySelector(".cap");
 var malmesburyElem = document.querySelector(".mal");
@@ -29,7 +30,7 @@ function addedNumberplate() {
 
         var inputVal = factoryInstance.addRegNumber(inputElem.value);
         regListElem.innerHTML = inputVal;
-        
+
         var numPlates = factoryInstance.getAll();
 
         for (var i = 0; i < numPlates.length; i++) {
@@ -50,34 +51,24 @@ function addedNumberplate() {
 
 function showNumberplate() {
     var selectedArea = selectAreaElem.value;
+    let townsSelected = factoryInstance.filterRegNumbers(selectedArea);
 
-    var townsSelected = [];
+    regListElem.innerHTML = "";
 
-    if (selectedArea == "") {
-        townsSelected = factoryInstance.getAll();
-    }
+    for (var i = 0; i < townsSelected.length; i++) {
+        var town = townsSelected[i];
 
-    else {
-        var loc = selectedArea;
-        townsSelected = factoryInstance.filterRegNumbers(loc);
-
-        regListElem.innerHTML = "";
-
-        for (var i = 0; i < townsSelected.length; i++) {
-            var town = townsSelected[i];
-
-            var numList = document.createElement("div");
-            numList.classList.add("numberPlate");
-            var plateName = document.createElement("div");
-            var plateName = document.createTextNode(town);
-            regListElem.appendChild(numList);
-            numList.appendChild(plateName);
-        };
-    }
+        var numList = document.createElement("div");
+        numList.classList.add("numberPlate");
+        var plateName = document.createElement("div");
+        var plateName = document.createTextNode(town);
+        regListElem.appendChild(numList);
+        numList.appendChild(plateName);
+    };
 
 };
 
-resetButtonElem.addEventListener('click', function() { 
+resetButtonElem.addEventListener('click', function () {
     localStorage.clear();
     window.location.reload();
 });

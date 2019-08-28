@@ -9,7 +9,6 @@ var capeTownElem = document.querySelector(".cap");
 var malmesburyElem = document.querySelector(".mal");
 
 var selectAreaElem = document.querySelector(".row6a");
-var errorMessage = document.querySelector(".error");
 var regListElem = document.querySelector(".regList");
 
 if (localStorage['numPlates'] !== undefined) {

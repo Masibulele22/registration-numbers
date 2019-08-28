@@ -8,15 +8,15 @@
     <link rel="stylesheet" type="text/css" href="./css/registration_number.css">
     <link href="./tests/registration_number.tests.js">
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Anton|Baloo|Bangers|Barlow+Condensed|Ceviche+One|Lilita+One|Luckiest+Guy|Noto+Sans+SC|Pacifico|Permanent+Marker|Racing+Sans+One|Rajdhani|Ropa+Sans|Rye|Secular+One|Sigmar+One|Tangerine|Zhi+Mang+Xing&display=swap');
-        </style>
+    @import url('https://fonts.googleapis.com/css?family=Anton|Baloo|Bangers|Barlow+Condensed|Ceviche+One|Lilita+One|Luckiest+Guy|Noto+Sans+SC|Pacifico|Permanent+Marker|Racing+Sans+One|Rajdhani|Ropa+Sans|Rye|Secular+One|Sigmar+One|Tangerine|Zhi+Mang+Xing&display=swap');
+    </style>
     <title>Document</title>
 </head>
 
 <body>
     
         <p class="row1">Registration Number:</p>
-        <div class="row2"><textarea cols="25%" class="input" rows="1%" id="plate" maxlength="10" placeholder="Enter Numberplate Here"
+        <div class="row2"><textarea cols="25%" class="input" rows="1%" id="plate" value="" maxlength="9" placeholder="Enter Numberplate Here"
                 onkeyup="numberplateAdded()"></textarea></div>
         <script>
             function numberplateAdded() {
@@ -34,10 +34,9 @@
                 <option class="cap" value="CA">Cape Town</option>
                 <option class="mal" value="CK">Malmesbury</option>
             </select>
-            <!-- <div class="error"></div> -->
         </div>
         <div class="row7"><button class="showButton">Show</button></div>
-        <ul class="regList"></ul>
+        <span class="list"><ul class="regList"></ul></span>
         <footer>© MRN Websites 2019. All Rights Reserved.</footer>
 
     

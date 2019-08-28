@@ -29,7 +29,7 @@ function RegNumbers(plates) {
 
         if (!enteredNumberplates.includes(input)) {
             enteredNumberplates.push(input);
-            return "Numberplate added";
+            return "";
         }
         return "Numberplate already added!";
     };

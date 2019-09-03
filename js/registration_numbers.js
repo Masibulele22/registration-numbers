@@ -7,7 +7,7 @@ function RegNumbers(plates) {
             inputPlates.startsWith("CK") ||
             inputPlates.startsWith("CJ")
         ) {
-            return true
+            return true;
         }
         else {
             return false;
@@ -19,40 +19,43 @@ function RegNumbers(plates) {
         var number = typedRegNumbers.slice(2);
         var input = location + " " + number;
 
-        if (input === "") {
-            return "Please enter a valid registration number!"
-        }
+        var regNumTest = new RegExp(/[A-Z!@#$%^&*()_+="';?.><,\/<>" "+*]/g);
+        var regResult = regNumTest.test(number);
 
         if (!checkPlates(input)) {
             return "Please enter a valid registration number!"
         }
 
-        if (!enteredNumberplates.includes(input)) {
-            enteredNumberplates.push(input);
-            return "";
+        if (regResult === true) {
+            return "Please enter a valid registration number!"
         }
-        return "Numberplate already added!";
+
+        else if (regResult === false) {
+            if (!enteredNumberplates.includes(input)) {
+                enteredNumberplates.push(input);
+                return "Numberplate successfully added";
+            }
+            return "Numberplate already added!";
+
+        }
+
     };
 
     function filterRegNumbers(loc) {
 
-        //console.log(enteredNumberplates);
-        
         let filteredListOfRegistrations = [];
-        
+
         if (loc == 'ALL') {
             return enteredNumberplates;
         }
-        
+
         for (var i = 0; i < enteredNumberplates.length; i++) {
 
             if (enteredNumberplates[i].startsWith(loc)) {
                 filteredListOfRegistrations.push(enteredNumberplates[i]);
             }
         }
-        
-        //console.log(filteredListOfRegistrations);
-       
+
         return filteredListOfRegistrations;
     };
 

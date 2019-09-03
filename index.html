@@ -16,7 +16,7 @@
 <body>
     
         <p class="row1">Registration Number:</p>
-        <div class="row2"><textarea cols="25%" class="input" rows="1%" id="plate" value="" maxlength="9" placeholder="Enter Numberplate Here"
+        <div class="row2"><textarea cols="32%" class="input" rows="1%" id="plate" value="" maxlength="9" placeholder="Enter Valid Format eg.CA123-456"
                 onkeyup="numberplateAdded()"></textarea></div>
         <script>
             function numberplateAdded() {
@@ -27,6 +27,7 @@
 
         <div class="row3"><button class="addButton">Add</button><button class="resetButton">Reset</button></div>
         <div class="row6">
+        <div class="errorDisplay"></div>
             <select class="row6a">
                 <option value="">Select area</option>
                 <option class="all" value="ALL">All Towns</option>

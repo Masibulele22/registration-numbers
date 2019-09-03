@@ -8,6 +8,7 @@ var bellvilleElem = document.querySelector(".bel");
 var capeTownElem = document.querySelector(".cap");
 var malmesburyElem = document.querySelector(".mal");
 
+var errorDisplayElem = document.querySelector(".errorDisplay");
 var selectAreaElem = document.querySelector(".row6a");
 var regListElem = document.querySelector(".regList");
 
@@ -19,29 +20,36 @@ else {
     storePlates = [];
 }
 
-let factoryInstance = RegNumbers(storePlates);
-
-function addedNumberplate() {
-    if (addButtonElem) {
-
-        var inputValidator = factoryInstance.checkPlates(inputElem.value);
-        regListElem.innerHTML = inputValidator;
-
-        var inputVal = factoryInstance.addRegNumber(inputElem.value);
-        regListElem.innerHTML = inputVal;
-
-        var numPlates = factoryInstance.getAll();
-
+function displayPlates(){
+    var numPlates = factoryInstance.getAll();
         for (var i = 0; i < numPlates.length; i++) {
             var numPlates2 = numPlates[i];
 
             var newPlate = document.createElement("div");
             newPlate.classList.add("numberPlate");
-            var newNumber = document.createElement("div");
+            //var newNumber = document.createElement("div");
             var newNumber = document.createTextNode(numPlates2);
             newPlate.appendChild(newNumber);
             regListElem.appendChild(newPlate);
         };
+}
+
+let factoryInstance = RegNumbers(storePlates);
+
+if(storePlates) {
+    displayPlates()
+}
+
+function addedNumberplate() {
+
+    factoryInstance.checkPlates(inputElem.value);
+
+    var inputVal = factoryInstance.addRegNumber(inputElem.value);
+    errorDisplayElem.innerHTML = inputVal;
+
+    if (inputVal === "Numberplate successfully added") {
+        regListElem.innerHTML = "";
+        displayPlates();
     };
 
     localStorage['numPlates'] = JSON.stringify(factoryInstance.getAll());

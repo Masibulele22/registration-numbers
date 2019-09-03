@@ -5,7 +5,7 @@ function RegNumbers(plates) {
 
         if (inputPlates.startsWith("CA") ||
             inputPlates.startsWith("CK") ||
-            inputPlates.startsWith("CJ")
+            inputPlates.startsWith("CY")
         ) {
             return true;
         }

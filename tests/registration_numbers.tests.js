@@ -29,13 +29,13 @@ describe("RegNumbers", function () {
 
     });
     
-    it("should be able to accept valid numberplates", function () {
+    it("should be able to accept all valid numberplates", function () {
 
         let instance = RegNumbers();
 
-        assert.equal("Please enter a valid registration number!", instance.addRegNumber("CA 123 123"));
-        assert.equal("Please enter a valid registration number!", instance.addRegNumber("CK 123-456"));
-        assert.equal("Please enter a valid registration number!", instance.addRegNumber("CY 123456"));
+        assert.equal("Numberplate successfully added", instance.addRegNumber("CA 123 123"));
+        assert.equal("Numberplate successfully added", instance.addRegNumber("CK 123-456"));
+        assert.equal("Numberplate successfully added", instance.addRegNumber("CY 123456"));
     });
 
     it("should be able to reject numberplates with an invalid location", function () {
@@ -72,14 +72,20 @@ describe("RegNumbers", function () {
         assert.equal("Please enter a valid registration number!", instance.addRegNumber(""));
     });
 
-    it("should be able to filter all numberplates for Bellville", function () {
+    it("should be able to filter all numberplates to their respective locations", function () {
 
         let instance = RegNumbers();
 
-        instance.addRegNumber("CY123343");
-        instance.addRegNumber("CA123453");
-        instance.addRegNumber("CY123987")
-        assert.deepEqual(["CY 123343", "CY 123987"], instance.filterRegNumbers("CY"));
+        instance.addRegNumber("CA123-453");
+        instance.addRegNumber("CA543619");
+        instance.addRegNumber("CK123 987");
+        instance.addRegNumber("CK567 807");
+        instance.addRegNumber("CY123 343");
+        instance.addRegNumber("CY123987");
+
+        assert.deepEqual(["CA 123-453", "CA 543619"], instance.filterRegNumbers("CA"));
+        assert.deepEqual(["CK 123 987", "CK 567 807"], instance.filterRegNumbers("CK"));
+        assert.deepEqual(["CY 123 343", "CY 123987"], instance.filterRegNumbers("CY"));
     });
 
 });

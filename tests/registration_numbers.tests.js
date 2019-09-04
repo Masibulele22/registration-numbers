@@ -76,9 +76,10 @@ describe("RegNumbers", function () {
 
         let instance = RegNumbers();
 
-        instance.addRegNumber("CY 123 343");
-
-        assert.deepEqual([], instance.filterRegNumbers([]));
+        instance.addRegNumber("CY123343");
+        instance.addRegNumber("CA123453");
+        instance.addRegNumber("CY123987")
+        assert.deepEqual(["CY 123343", "CY 123987"], instance.filterRegNumbers("CY"));
     });
 
 });

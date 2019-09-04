@@ -20,7 +20,7 @@ function RegNumbers(plates) {
         var number = typedRegNumbers.slice(2);
         var input = location + " " + number;
 
-        var regNumTest = new RegExp(/[A-Z!@#$%^&*()_+="';?.><,\/<>" "+*]/g);
+        var regNumTest = new RegExp(/[A-Z/s!@#$%^&*()_+="';?.><,\/<>"+*]/g);
         var regResult = regNumTest.test(number);
 
         if (!checkPlates(input)) {
@@ -58,7 +58,7 @@ function RegNumbers(plates) {
                 filteredListOfRegistrations.push(enteredNumberplates[i]);
             }
         }
-
+         
         return filteredListOfRegistrations;
         
     };

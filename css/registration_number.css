@@ -74,7 +74,7 @@ select {
 }
 
 .regList {
-    float: right;
+    text-align: center;
     color: red;
     font-family: "Rye", cursive;
     font-weight: 900;

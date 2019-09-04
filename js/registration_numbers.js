@@ -1,5 +1,6 @@
 function RegNumbers(plates) {
     var enteredNumberplates = plates || [];
+    //var filteredListOfRegistrations = [];
 
     function checkPlates(inputPlates) {
 
@@ -44,10 +45,12 @@ function RegNumbers(plates) {
     function filterRegNumbers(loc) {
 
         let filteredListOfRegistrations = [];
+        console.log(filteredListOfRegistrations);
 
         if (loc == 'ALL') {
             return enteredNumberplates;
         }
+        console.log(filteredListOfRegistrations);
 
         for (var i = 0; i < enteredNumberplates.length; i++) {
 
@@ -57,17 +60,23 @@ function RegNumbers(plates) {
         }
 
         return filteredListOfRegistrations;
+        
     };
 
     function getAll() {
         return enteredNumberplates
     };
 
+    // function getFilteredNumbersplates() {
+    //     return filteredListOfRegistrations
+    // };
+
     return {
         checkPlates,
         addRegNumber,
         filterRegNumbers,
-        getAll
+        getAll,
+        //getFilteredNumbersplates
     };
 
 };
